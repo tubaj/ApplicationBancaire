@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#090979"
+    android:orientation="vertical"
+    tools:context=".LoadingScreenActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="297dp"
+        android:layout_gravity="center"
+        android:src="@drawable/bank"
+        android:layout_marginTop="120dp"
+        tools:layout_editor_absoluteX="31dp"
+        tools:layout_editor_absoluteY="89dp" />
+
+    <TextView
+        android:layout_width="345dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="20dp"
+        android:text="Application Bancaire"
+        android:textAllCaps="true"
+        android:textSize="25dp" />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:layout_gravity="center" />
+
+</LinearLayout>
