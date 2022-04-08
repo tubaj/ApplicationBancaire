@@ -35,29 +35,29 @@ class SignUpActivity : AppCompatActivity() {
                     Toast.makeText(this, "Votre IBAN est incorrect", Toast.LENGTH_LONG)
                         .show()
                 }//verifier si iban fait 27 caractères
-                if (password_input.length != 8) {
-                    Toast.makeText(
-                        this, "Votre mot de passe doit avoir 8 caractères", Toast.LENGTH_LONG
-                    )
-                        .show()
-                }//verifier si le mdp est de 8 caracteres
                 else {
-                    /*val nom = "bouleau"
-                            val prenom = "android"
-                            val iban = "123456789123456789123456789"
-                            val id = "123456"
-                            val mdp = "12345678"
-                            val mdp2 = "12345678"*/
-                    if (password_input != conf_password_input) {
-                        error2.text = "Vos mots de passe ne se correspondent pas"
-                        error2.visibility = View.VISIBLE
+                        if (password_input.length != 8) {
+                            Toast.makeText(
+                                this, "Votre mot de passe doit avoir 8 caractères", Toast.LENGTH_LONG).show()
+                        }//verifier si le mdp est de 8 caracteres
+                        else {
+                            /*val nom = "bouleau"
+                                    val prenom = "android"
+                                    val iban = "123456789123456789123456789"
+                                    val id = "123456"
+                                    val mdp = "12345678"
+                                    val mdp2 = "12345678"*/
+                            if (password_input != conf_password_input) {
+                                error2.text = "Vos mots de passe ne se correspondent pas"
+                                error2.visibility = View.VISIBLE
 
-                    } else {
-                        val intent = Intent(this, LoginActivity::class.java)
-                        startActivity(intent)
-                    }
-                }
-            }//si tous les champs sont remplis
+                            } else {
+                                val intent = Intent(this, LoginActivity::class.java)
+                                startActivity(intent)
+                            }
+                    }//IBAN verifié
+                }//fin grand else
+            }//si tous les champs sont remplis //FIN grand else
         }//fin incriptionbutton
     }//fin override
 }//fin class
