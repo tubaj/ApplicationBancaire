@@ -1,14 +1,130 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".SignUpActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Inscription page !!!"
-        tools:ignore="MissingConstraints" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/gradient_background"
+tools:context=".SignUpActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/logobank"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/bank" />
+
+    <EditText
+        android:id="@+id/nom"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/logobank"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="35dp"
+        android:background="@color/white"
+        android:hint="Nom"
+        android:paddingLeft="10dp" />
+
+
+    <EditText
+        android:id="@+id/prenom"
+        android:layout_width="134dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/logobank"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="5dp"
+        android:layout_toRightOf="@+id/nom"
+        android:background="@color/white"
+        android:hint="Prénom"
+        android:paddingLeft="10dp" />
+
+
+    <EditText
+        android:id="@+id/iban"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/prenom"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:hint="Indiquer votre IBAN"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp" />
+
+    <EditText
+    android:id="@+id/id_connect"
+    android:layout_width="350dp"
+    android:layout_height="50dp"
+    android:layout_marginHorizontal="40dp"
+    android:layout_below="@+id/iban"
+    android:layout_marginTop="25dp"
+    android:background="@color/white"
+    android:hint="Identifiant "
+    android:paddingLeft="10dp" />
+
+<EditText
+    android:id="@+id/password"
+    android:layout_width="350dp"
+    android:layout_height="50dp"
+    android:layout_below="@+id/id_connect"
+    android:layout_marginHorizontal="40dp"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:hint="Mot de passe"
+    android:inputType="textPassword"
+    android:paddingLeft="10dp" />
+
+<EditText
+    android:id="@+id/confirmer_password"
+    android:layout_width="350dp"
+    android:layout_height="50dp"
+    android:layout_marginHorizontal="40dp"
+    android:layout_below="@+id/password"
+    android:layout_marginTop="20dp"
+    android:layout_marginBottom="5dp"
+    android:background="@color/white"
+    android:hint="Confirmer votre mot de passe"
+    android:inputType="textPassword"
+    android:paddingLeft="10dp" />
+
+
+
+
+<TextView
+    android:id="@+id/error2"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textSize="14dp"
+    android:visibility="gone"
+    android:textStyle="normal"
+    android:textColor="@color/error_color"
+    android:layout_marginBottom="10dp"
+    android:layout_below="@+id/confirmer_password"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/Inscription"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_below="@+id/password"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="109dp"
+        android:layout_marginEnd="40dp"
+        android:background="@color/teal_200"
+        android:hint="inscription"
+        android:textSize="19dp" />
+
+<TextView
+    android:id="@+id/aide"
+    android:layout_width="match_parent"
+    android:layout_height="19dp"
+    android:layout_marginTop="690dp"
+    android:gravity="center"
+    android:text="Besoin d'aide?"
+    android:textColor="@color/black"
+    android:textSize="16dp"
+    android:textStyle="italic" />
+
+</RelativeLayout>

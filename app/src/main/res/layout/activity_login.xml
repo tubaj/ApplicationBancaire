@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
+    android:background= "@drawable/gradient_background"
     tools:context=".LoginActivity">
 
     <ImageView
@@ -39,6 +40,7 @@
         tools:layout_editor_absoluteX="104dp"
         tools:layout_editor_absoluteY="331dp" />
 
+
     <EditText
         android:id="@+id/passwordtext"
         android:layout_width="177dp"
@@ -48,11 +50,22 @@
         tools:layout_editor_absoluteX="104dp"
         tools:layout_editor_absoluteY="365dp" />
 
-    <Button
-        android:id="@+id/connexionbutton"
+    <TextView
+        android:id="@+id/error"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#4CAF50"
+        android:textSize="14dp"
+        android:visibility="gone"
+        android:textStyle="normal"
+        android:textColor="@color/error_color"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/passwordtext"/>
+
+    <Button
+        android:id="@+id/connexionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#1471ab"
         android:layout_margin="20dp"
         android:text="Connexion"
         tools:ignore="MissingConstraints"
@@ -60,14 +73,14 @@
         tools:layout_editor_absoluteY="435dp" />
 
     <Button
-        android:id="@+id/buttonmdpoublie"
+        android:id="@+id/mdpoublie_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="#4CAF50"
         android:text="Mot de passe oublié"
         tools:ignore="MissingConstraints"
         android:layout_margin="15dp"
-        android:layout_below="@id/connexionbutton"
+        android:layout_below="@id/connexionButton"
         tools:layout_editor_absoluteX="140dp"
         tools:layout_editor_absoluteY="435dp" />
 
@@ -81,7 +94,7 @@
         tools:layout_editor_absoluteX="73dp"
         tools:layout_editor_absoluteY="499dp" />
     <Button
-        android:id="@+id/inscription"
+        android:id="@+id/inscriptionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@android:color/holo_orange_dark"
@@ -90,10 +103,5 @@
         tools:layout_editor_absoluteX="146dp"
         tools:layout_editor_absoluteY="544dp"
         tools:ignore="MissingConstraints" />
-
-
-
-
-
 
 </LinearLayout>
