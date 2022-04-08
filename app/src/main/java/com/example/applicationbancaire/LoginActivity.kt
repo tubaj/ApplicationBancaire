@@ -22,24 +22,29 @@ class LoginActivity : AppCompatActivity() {
             if (txtidentifiant.trim().isEmpty() || passwordtext.trim().isEmpty()) {
                 Toast.makeText(this, "vous devez remplir tous les champs ", Toast.LENGTH_LONG)
                     .show()
-            } else {
+            } //fin if si tous les champs ne sont pas remplis
+            else {
                 val correcteid = "251436"
                 val correctpassword = "android"
                 if (correcteid == txtidentifiant && correctpassword == passwordtext) {
                     val intent = Intent(this, AccueilActivity::class.java)
                     startActivity(intent)
+                }// si l'id et mdp correspondent avec la bdd
+                else{
+                error.text = "votre identifiant ou mot de passe est incorrect "
+                error.visibility = View.VISIBLE
                 }
-            else{
-            error.text = "votre identifiant ou mot de passe est incorrect "
-            error.visibility = View.VISIBLE
-        }
 
+            }//si tous les champs sont remplis
 
-        }
-       // val inscriptionButton = findViewById<Button>(R.id.inscriptionButton);
             inscriptionButton.setOnClickListener {
-            val intent = Intent(this,SignUpActivity::class.java)
-            startActivity(intent)
-        }
-    }}}
+                val intentInscription = Intent(this,SignUpActivity::class.java).also {
+                    startActivity(it)
+                }
+            }//fin quand on clique sur le bouton inscription
+        }//fin connexiononlistener
+
+    }//fin override
+
+}//fin class
 

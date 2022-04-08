@@ -20,7 +20,8 @@
         <activity
             android:name=".SignUpActivity"
             android:exported="true"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+            android:parentActivityName=".LoginActivity"/>
         <activity
             android:name=".LoginActivity"
             android:exported="true"

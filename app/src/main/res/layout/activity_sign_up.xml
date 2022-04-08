@@ -49,45 +49,44 @@ tools:context=".SignUpActivity">
         android:layout_marginBottom="5dp"
         android:background="@color/white"
         android:hint="Indiquer votre IBAN"
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/id_connect"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/iban"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="25dp"
+        android:background="@color/white"
+        android:hint="Identifiant "
+        android:paddingLeft="10dp" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/id_connect"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:hint="Mot de passe"
         android:inputType="textPassword"
         android:paddingLeft="10dp" />
 
     <EditText
-    android:id="@+id/id_connect"
-    android:layout_width="350dp"
-    android:layout_height="50dp"
-    android:layout_marginHorizontal="40dp"
-    android:layout_below="@+id/iban"
-    android:layout_marginTop="25dp"
-    android:background="@color/white"
-    android:hint="Identifiant "
-    android:paddingLeft="10dp" />
-
-<EditText
-    android:id="@+id/password"
-    android:layout_width="350dp"
-    android:layout_height="50dp"
-    android:layout_below="@+id/id_connect"
-    android:layout_marginHorizontal="40dp"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="5dp"
-    android:background="@color/white"
-    android:hint="Mot de passe"
-    android:inputType="textPassword"
-    android:paddingLeft="10dp" />
-
-<EditText
-    android:id="@+id/confirmer_password"
-    android:layout_width="350dp"
-    android:layout_height="50dp"
-    android:layout_marginHorizontal="40dp"
-    android:layout_below="@+id/password"
-    android:layout_marginTop="20dp"
-    android:layout_marginBottom="5dp"
-    android:background="@color/white"
-    android:hint="Confirmer votre mot de passe"
-    android:inputType="textPassword"
-    android:paddingLeft="10dp" />
+        android:id="@+id/confirmer_password"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/password"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:hint="Confirmer votre mot de passe"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp" />
 
 
 
@@ -96,9 +95,10 @@ tools:context=".SignUpActivity">
     android:id="@+id/error2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:textSize="14dp"
+    android:textSize="16dp"
     android:visibility="gone"
     android:textStyle="normal"
+    android:layout_marginLeft="45dp"
     android:textColor="@color/error_color"
     android:layout_marginBottom="10dp"
     android:layout_below="@+id/confirmer_password"/>
