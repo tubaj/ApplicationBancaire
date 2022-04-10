@@ -12,7 +12,7 @@ tools:context=".SignUpActivity">
         android:layout_height="100dp"
         android:layout_marginLeft="100dp"
         android:layout_marginTop="25dp"
-        android:src="@drawable/bank" />
+        android:src="@drawable/bank"/>
 
     <EditText
         android:id="@+id/nom"

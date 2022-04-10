@@ -10,4 +10,5 @@
     <color name="error_color">#f00</color>
     <color name="blue">#279fea</color>
     <color name="blueBar">#277bea</color>
+    <color name="bleuFonce">#205be6</color>
 </resources>

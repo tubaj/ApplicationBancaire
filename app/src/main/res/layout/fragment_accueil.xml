@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,15 +7,75 @@
     tools:context=".AccueilFragment">
 
     <!-- TODO: Update blank fragment layout -->
+
     <TextView
         android:id="@+id/accueil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Accueil fragment"
         android:textSize="30sp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.444" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/fond_background"
+        android:layout_width="match_parent"
+        android:layout_height="374dp"
+        android:src="@drawable/gradient_background" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="400dp"
+        android:layout_height="401dp"
+        android:src="@drawable/rectangle_jaune"
+        tools:layout_editor_absoluteX="-28dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:layout_width="272dp"
+        android:layout_height="120dp"
+        android:layout_below="@+id/imageView11"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="-292dp"
+        android:layout_marginEnd="95dp"
+        android:text="Solde total des comptes"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="131dp" />
+
+    <TextView
+        android:id="@+id/solde"
+        android:layout_width="100dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/imageView11"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="100dp"
+        android:text="1500"
+        android:textAlignment="center"
+        android:textSize="55dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="251dp" />
+
+    <TextView
+        android:id="@+id/euros"
+        android:layout_width="35dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/imageView11"
+        android:layout_marginStart="280dp"
+        android:layout_marginBottom="99dp"
+        android:text="€"
+        android:textAlignment="center"
+        android:textSize="60dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="251dp" />
+
+
+</RelativeLayout>
