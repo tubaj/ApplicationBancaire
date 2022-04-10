@@ -12,6 +12,10 @@ import kotlinx.android.synthetic.main.activity_login.*
 import kotlin.error
 
 class LoginActivity : AppCompatActivity() {
+    // Write a message to the database
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -24,7 +28,7 @@ class LoginActivity : AppCompatActivity() {
                     .show()
             } //fin if si tous les champs ne sont pas remplis
             else {
-                val correcteid = "251436"
+                val correcteid = "123456"
                 val correctpassword = "android"
                 if (correcteid == txtidentifiant && correctpassword == passwordtext) {
                     val intent = Intent(this, AccueilActivity::class.java)

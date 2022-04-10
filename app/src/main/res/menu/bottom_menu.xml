@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/acuueil"
+        android:title="Accueil"
+        android:icon="@drawable/home"/>
+    <item
+        android:id="@+id/virement"
+        android:title="Virement"
+        android:icon="@drawable/transaction"/>
+    <item
+        android:id="@+id/depense"
+        android:title="Dépenses"
+        android:icon="@drawable/depenses"/>
+    <item
+        android:id="@+id/contact"
+        android:title="Contact"
+        android:icon="@drawable/contact"/>
+</menu>

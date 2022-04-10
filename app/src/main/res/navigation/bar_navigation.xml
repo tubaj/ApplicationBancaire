@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/bar_navigation"
+    app:startDestination="@id/accueilFragment">
+
+    <fragment
+        android:id="@+id/accueilFragment"
+        android:name="com.example.applicationbancaire.AccueilFragment"
+        android:label="fragment_accueil"
+        tools:layout="@layout/fragment_accueil" />
+    <fragment
+        android:id="@+id/virementFragment"
+        android:name="com.example.applicationbancaire.VirementFragment"
+        android:label="fragment_virement"
+        tools:layout="@layout/fragment_virement" />
+    <fragment
+        android:id="@+id/depenseFragment"
+        android:name="com.example.applicationbancaire.DepenseFragment"
+        android:label="fragment_depense"
+        tools:layout="@layout/fragment_depense" />
+    <fragment
+        android:id="@+id/contactFragment"
+        android:name="com.example.applicationbancaire.ContactFragment"
+        android:label="fragment_contact"
+        tools:layout="@layout/fragment_contact" />
+</navigation>
