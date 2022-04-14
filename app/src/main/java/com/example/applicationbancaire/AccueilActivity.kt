@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationItemView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_accueil.*
+import kotlinx.android.synthetic.main.fragment_accueil.*
 
 class AccueilActivity : AppCompatActivity() {
 
@@ -25,6 +26,7 @@ class AccueilActivity : AppCompatActivity() {
             bottomNav.setOnItemSelectedListener(navListener)
         }
 
+
     }//fin override
      //creation d'un navigation listener
      val navListener = BottomNavigationView.OnNavigationItemSelectedListener{ item ->
@@ -32,6 +34,7 @@ class AccueilActivity : AppCompatActivity() {
          when(item.itemId){
             R.id.accueil ->{
                 currentFragment =  AccueilFragment()
+
             }
             R.id.virement -> {
                 currentFragment = VirementFragment()

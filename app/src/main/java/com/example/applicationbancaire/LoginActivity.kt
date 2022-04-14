@@ -10,6 +10,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
 import com.example.applicationbancaire.Database.BankDataBase
+import com.example.applicationbancaire.data.User
 import kotlinx.android.synthetic.main.activity_login.*
 import kotlin.error
 
@@ -17,7 +18,8 @@ class LoginActivity : AppCompatActivity() {
     // Write a message to the database
 
     lateinit var  db : BankDataBase
-
+    val user1 = User(0, "boubou", "marie", "12345678", "123456", "123456789123456789123456789", "12345678912")
+    val user2 = User(0, "baba", "mami", "123789456", "123456", "923456789123456789123456789", "12345678912")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)

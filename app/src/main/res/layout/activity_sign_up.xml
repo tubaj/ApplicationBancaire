@@ -39,7 +39,7 @@ tools:context=".SignUpActivity">
         android:paddingLeft="10dp" />
 
 
-    <EditText
+        <EditText
         android:id="@+id/edit_iban"
         android:layout_width="350dp"
         android:layout_height="50dp"

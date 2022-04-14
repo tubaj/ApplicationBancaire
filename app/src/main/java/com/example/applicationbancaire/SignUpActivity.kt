@@ -62,15 +62,15 @@ class SignUpActivity : AppCompatActivity() {
                                                     this, "Votre  numero de compte doit avoir 11 caractères", Toast.LENGTH_LONG).show()
                                             } //fin verif numcompte
                                             else {
-                                                val user = User(0, nom_input, prenom_input, id_connect_input, password_input, iban_input, num_compte)
-                                                val isInserted = db.addUser(user)
+                                               // val user = User(0, nom_input, prenom_input, id_connect_input, password_input, iban_input, num_compte)
+                                               // val isInserted = db.addUser(user)
 
-                                                if (isInserted) {
+                                                //if (isInserted) {
                                                     Toast.makeText(this, "Votre compte a été créer avec succès", Toast.LENGTH_SHORT).show()
                                                     val intent =
                                                         Intent(this, LoginActivity::class.java)
                                                     startActivity(intent)
-                                                }
+                                               // }
                                             }//else création du user
                                     }//fin else avec verif compte et création user
                                 }//password verifié
