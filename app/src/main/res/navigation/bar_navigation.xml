@@ -9,17 +9,29 @@
         android:id="@+id/accueilFragment"
         android:name="com.example.applicationbancaire.AccueilFragment"
         android:label="fragment_accueil"
-        tools:layout="@layout/fragment_accueil" />
+        tools:layout="@layout/fragment_accueil" >
+        <action
+            android:id="@+id/action_accueilFragment_to_virementFragment"
+            app:destination="@id/virementFragment" />
+    </fragment>
     <fragment
         android:id="@+id/virementFragment"
         android:name="com.example.applicationbancaire.VirementFragment"
         android:label="fragment_virement"
-        tools:layout="@layout/fragment_virement" />
+        tools:layout="@layout/fragment_virement" >
+        <action
+            android:id="@+id/action_virementFragment_to_depenseFragment"
+            app:destination="@id/depenseFragment" />
+    </fragment>
     <fragment
         android:id="@+id/depenseFragment"
         android:name="com.example.applicationbancaire.DepenseFragment"
         android:label="fragment_depense"
-        tools:layout="@layout/fragment_depense" />
+        tools:layout="@layout/fragment_depense" >
+        <action
+            android:id="@+id/action_depenseFragment_to_contactFragment"
+            app:destination="@id/contactFragment" />
+    </fragment>
     <fragment
         android:id="@+id/contactFragment"
         android:name="com.example.applicationbancaire.ContactFragment"

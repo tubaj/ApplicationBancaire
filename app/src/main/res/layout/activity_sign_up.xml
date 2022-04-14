@@ -15,7 +15,7 @@ tools:context=".SignUpActivity">
         android:src="@drawable/bank"/>
 
     <EditText
-        android:id="@+id/nom"
+        android:id="@+id/edit_nom"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:layout_below="@+id/logobank"
@@ -27,23 +27,23 @@ tools:context=".SignUpActivity">
 
 
     <EditText
-        android:id="@+id/prenom"
+        android:id="@+id/edit_prenom"
         android:layout_width="134dp"
         android:layout_height="50dp"
         android:layout_below="@+id/logobank"
         android:layout_marginTop="35dp"
         android:layout_marginBottom="5dp"
-        android:layout_toRightOf="@+id/nom"
+        android:layout_toRightOf="@+id/edit_nom"
         android:background="@color/white"
         android:hint="Prénom"
         android:paddingLeft="10dp" />
 
 
     <EditText
-        android:id="@+id/iban"
+        android:id="@+id/edit_iban"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/prenom"
+        android:layout_below="@+id/edit_prenom"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
@@ -55,7 +55,7 @@ tools:context=".SignUpActivity">
         android:id="@+id/id_connect"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/iban"
+        android:layout_below="@+id/edit_iban"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="25dp"
         android:background="@color/white"
@@ -63,7 +63,7 @@ tools:context=".SignUpActivity">
         android:paddingLeft="10dp" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/edit_password"
         android:layout_width="350dp"
         android:layout_height="50dp"
         android:layout_below="@+id/id_connect"
@@ -79,7 +79,7 @@ tools:context=".SignUpActivity">
         android:id="@+id/confirmer_password"
         android:layout_width="350dp"
         android:layout_height="50dp"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/edit_password"
         android:layout_marginHorizontal="40dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="5dp"
@@ -89,9 +89,19 @@ tools:context=".SignUpActivity">
         android:paddingLeft="10dp" />
 
 
+    <EditText
+        android:id="@+id/edit_num_compte"
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/edit_password"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:hint="numero de compte"
+        android:paddingLeft="10dp" />
 
-
-<TextView
+    <TextView
     android:id="@+id/error2"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -105,18 +115,18 @@ tools:context=".SignUpActivity">
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/Inscription"
+        android:id="@+id/BtnInscription"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_below="@+id/password"
+        android:layout_below="@+id/edit_password"
         android:layout_marginStart="40dp"
-        android:layout_marginTop="109dp"
+        android:layout_marginTop="176dp"
         android:layout_marginEnd="40dp"
         android:background="@color/teal_200"
         android:hint="inscription"
         android:textSize="19dp" />
 
-<TextView
+    <TextView
     android:id="@+id/aide"
     android:layout_width="match_parent"
     android:layout_height="19dp"

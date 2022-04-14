@@ -17,6 +17,15 @@
                             <option name="y" value="-652" />
                           </Point>
                         </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_accueilFragment_to_virementFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
+                        </option>
                       </LayoutPositions>
                     </value>
                   </entry>
@@ -25,8 +34,8 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-1109" />
-                            <option name="y" value="-657" />
+                            <option name="x" value="-1097" />
+                            <option name="y" value="-907" />
                           </Point>
                         </option>
                       </LayoutPositions>
@@ -49,9 +58,18 @@
                       <LayoutPositions>
                         <option name="myPosition">
                           <Point>
-                            <option name="x" value="-1551" />
-                            <option name="y" value="-648" />
+                            <option name="x" value="-1526" />
+                            <option name="y" value="-913" />
                           </Point>
+                        </option>
+                        <option name="myPositions">
+                          <map>
+                            <entry key="action_virementFragment_to_depenseFragment">
+                              <value>
+                                <LayoutPositions />
+                              </value>
+                            </entry>
+                          </map>
                         </option>
                       </LayoutPositions>
                     </value>

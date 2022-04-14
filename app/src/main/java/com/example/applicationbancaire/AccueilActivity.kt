@@ -46,4 +46,4 @@ class AccueilActivity : AppCompatActivity() {
          supportFragmentManager.beginTransaction().replace(R.id.nav_container,currentFragment).commit()
           true
      }
-}//fin clas
+}//fin class
