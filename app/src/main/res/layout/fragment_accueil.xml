@@ -66,13 +66,18 @@
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="251dp" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_deco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="6dp"
-        android:text="Deconnexion" />
+        android:layout_alignEnd="@+id/imageView11"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/blueBar"
+        android:hint="Deconnexion"
+        android:textSize="19dp" />
 
 
 </RelativeLayout>

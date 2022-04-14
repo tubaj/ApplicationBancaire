@@ -18,12 +18,10 @@ class LoginActivity : AppCompatActivity() {
     // Write a message to the database
 
     lateinit var  db : BankDataBase
-    val user1 = User(0, "boubou", "marie", "12345678", "123456", "123456789123456789123456789", "12345678912")
-    val user2 = User(0, "baba", "mami", "123789456", "123456", "923456789123456789123456789", "12345678912")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-
 
         db = BankDataBase(this) //initialise le constructeur de la bdd
 
@@ -35,11 +33,13 @@ class LoginActivity : AppCompatActivity() {
                     .show()
             } //fin if si tous les champs ne sont pas remplis
             else {
-                /*val user = db.findUser(txtidentifiant, passwordtext)
-                if (user != null){*/
-                val correcteid = "123456"
-                val correctpassword = "android"
-                if (correcteid == txtidentifiant && correctpassword == passwordtext) {
+                //val user = db.findUser("123456", "android")
+                //if (user != null){
+                //val correcteid = "123456"
+                //val correctpassword = "android"
+                //if (correcteid == txtidentifiant && correctpassword == passwordtext) {
+                    val user = db.findUser(txtidentifiant,passwordtext)
+                if (user != null) { //si on trouve l'utilisateur, on se connecte
                     val intent = Intent(this, AccueilActivity::class.java)
                     startActivity(intent)
                 }// si l'identifiant et mdp correspondent avec la bdd

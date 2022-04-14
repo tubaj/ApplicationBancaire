@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.applicationbancaire.data.Compte
 import com.example.applicationbancaire.data.User
 
 //creation de la bdd à l'appel du constructeur
@@ -37,11 +38,13 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
         db?.execSQL(createTableHistorique)
 
         val createTableCompte = """
-            CREATE TABLE  compte ( id INTEGER PRIMARY KEY AUTOINCREMENT,
-  									solde INTEGER,
-                                    banque VARCHAR(20),
-                                    num_compte integer(11)UNIQUE,
-                                    iban INTEGER(27) UNIQUE)
+            CREATE TABLE  $COMPTE_TABLE_NAME ( 
+                                    $COMPTE_ID INTEGER PRIMARY KEY AUTOINCREMENT,
+  									$SOLDE INTEGER,
+                                    $BANQUE VARCHAR(20),
+                                    $NUM_COMPTE VARCHAR(11)UNIQUE,
+                                    $IBAN VARCHAR(27) UNIQUE 
+            )
         """.trimIndent()
         db?.execSQL(createTableCompte)
 
@@ -50,12 +53,25 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
     override fun onUpgrade(db: SQLiteDatabase?,oldVersion: Int, newVersion: Int) {
        //upgrader les tables //suprimer les anciennes et recrer les nouvelles
 
-        db?.execSQL("DROP TABLE IF EXISTS users")
+        db?.execSQL("DROP TABLE IF EXISTS $USERS_TABLE_NAME")
         db?.execSQL("DROP TABLE IF EXISTS historique")
-        db?.execSQL("DROP TABLE IF EXISTS compte")
+        db?.execSQL("DROP TABLE IF EXISTS $COMPTE_TABLE_NAME")
         onCreate(db)
     }
+    fun addCompte(compte: Compte): Boolean{
+        //insérer un nvx compte dans le bdd
+        val db = this.writableDatabase //ouvrir la bdd
+        val values = ContentValues()
+        values.put(SOLDE, compte.solde)
+        values.put(BANQUE, compte.banque)
+        values.put(NUM_COMPTE, compte.num_compte )
+        values.put(IBAN, compte.iban )
 
+        //faire l'insert
+        val result = db.insert(COMPTE_TABLE_NAME,null, values).toInt()
+        db.close()//fermer la bdd
+        return result != -1 //donc true
+    }
     fun addUser(user: User): Boolean {
         //insérer un nvx utilisateur dans le bdd
         val db = this.writableDatabase //ouvrir la bdd
@@ -71,11 +87,10 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
         //faire l'insert
         val result = db.insert(USERS_TABLE_NAME,null, values).toInt()
         db.close()//fermer la bdd
-
         return result != -1 //donc true
     }
     fun findUser(identifiant:String,password:String): User?{//peut être null
-        var user: User? = null //d'abord a null
+        var user: User? = null //peut être null
         val db = this.readableDatabase
         val selectionArgs = arrayOf(IDENTIFIANT, MDP)
         val cursor = db.query(
@@ -104,7 +119,8 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
         }
         db.close()
         return user
-    }
+    }//fin findUser
+
     //contient variable qui sont  des attributs de classe
     companion object {
         private val DB_NAME = "bank_db" // val par defaut
@@ -117,7 +133,12 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
         private val MDP ="mdp"
         private val IBAN ="iban"
         private val NUM_COMPTE ="num_compte"
-    }
 
+        private val COMPTE_TABLE_NAME = "compte"
+        private val COMPTE_ID = "id"
+        private val SOLDE = "solde"
+        private val BANQUE = "banque"
+
+    }
 
 }

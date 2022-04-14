@@ -34,7 +34,6 @@ class AccueilActivity : AppCompatActivity() {
          when(item.itemId){
             R.id.accueil ->{
                 currentFragment =  AccueilFragment()
-
             }
             R.id.virement -> {
                 currentFragment = VirementFragment()
@@ -48,5 +47,8 @@ class AccueilActivity : AppCompatActivity() {
          }
          supportFragmentManager.beginTransaction().replace(R.id.nav_container,currentFragment).commit()
           true
+
+
      }
+
 }//fin class
