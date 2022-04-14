@@ -92,7 +92,7 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
     fun findUser(identifiant:String,password:String): User?{//peut être null
         var user: User? = null //peut être null
         val db = this.readableDatabase
-        val selectionArgs = arrayOf(IDENTIFIANT, MDP)
+        val selectionArgs = arrayOf(identifiant, password)
         val cursor = db.query(
             USERS_TABLE_NAME,
             null,

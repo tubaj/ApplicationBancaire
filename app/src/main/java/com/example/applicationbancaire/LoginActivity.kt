@@ -25,6 +25,7 @@ class LoginActivity : AppCompatActivity() {
 
         db = BankDataBase(this) //initialise le constructeur de la bdd
 
+
         connexionButton.setOnClickListener {
             val txtidentifiant = connexioninput.text.toString()
             val passwordtext = passwordtext.text.toString()
@@ -44,18 +45,19 @@ class LoginActivity : AppCompatActivity() {
                     startActivity(intent)
                 }// si l'identifiant et mdp correspondent avec la bdd
                 else{
-                error.text = "votre identifiant ou mot de passe est incorrect "
-                error.visibility = View.VISIBLE
+                    error.text = "votre identifiant ou mot de passe est incorrect "
+                    error.visibility = View.VISIBLE
                 }
 
             }//si tous les champs sont remplis
 
-            inscriptionButton.setOnClickListener {
-                val intentInscription = Intent(this,SignUpActivity::class.java).also {
-                    startActivity(it)
-                }
-            }//fin quand on clique sur le bouton inscription
         }//fin connexiononlistener
+
+        inscriptionButton.setOnClickListener {
+            val intentInscription = Intent(this,SignUpActivity::class.java).also {
+                startActivity(it)
+            }
+        }//fin quand on clique sur le bouton inscription
 
     }//fin override
 
