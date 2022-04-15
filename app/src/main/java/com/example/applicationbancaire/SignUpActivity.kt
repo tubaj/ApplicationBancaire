@@ -7,6 +7,7 @@ import android.util.DisplayMetrics
 import android.view.View
 import android.widget.Toast
 import com.example.applicationbancaire.Database.BankDataBase
+import com.example.applicationbancaire.data.Compte
 import com.example.applicationbancaire.data.User
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
@@ -19,6 +20,7 @@ class SignUpActivity : AppCompatActivity() {
 
         BtnInscription.setOnClickListener {
             db = BankDataBase(this)
+            val solde_random = (100..5000).random() // generated random from 100 to 5000 included
             val nom_input = edit_nom.text.toString()
             val prenom_input = edit_prenom.text.toString()
             val id_connect_input = id_connect.text.toString()
@@ -63,7 +65,9 @@ class SignUpActivity : AppCompatActivity() {
                                             } //fin verif numcompte
                                             else {
                                                 val user = User(0, nom_input, prenom_input, id_connect_input, password_input, iban_input, num_compte)
+                                                val compte = Compte(0,solde_random, "BNP", num_compte,iban_input ) //creation du compte associé au client
                                                 val isInserted = db.addUser(user)
+                                                db.addCompte(compte)
 
                                                 if (isInserted) {
                                                     Toast.makeText(this, "Votre compte a été créer avec succès", Toast.LENGTH_SHORT).show()
@@ -71,6 +75,7 @@ class SignUpActivity : AppCompatActivity() {
                                                         Intent(this, LoginActivity::class.java)
                                                     startActivity(intent)
                                                }
+                                                finish()
                                             }//else création du user
                                     }//fin else avec verif compte et création user
                                 }//password verifié

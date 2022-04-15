@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.applicationbancaire.Database.BankDataBase
 import kotlinx.android.synthetic.main.fragment_accueil.*
 
 // TODO: Rename parameter arguments, choose names that match
@@ -23,12 +24,14 @@ class VirementFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    //lateinit var  db : BankDataBase
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-
+           // db = BankDataBase(this) //initialise le constructeur de la bdd
         }
     }
 
@@ -42,6 +45,12 @@ class VirementFragment : Fragment() {
 
 
     }
+
+    /*fun faireVirement(iban_exp: String, iban_desti: String, montant: Int) {
+            db.getIban(iban_exp)
+    }*/
+
+
 
     companion object {
         /**

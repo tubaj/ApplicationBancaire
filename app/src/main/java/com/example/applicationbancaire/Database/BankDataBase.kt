@@ -58,6 +58,32 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
         db?.execSQL("DROP TABLE IF EXISTS $COMPTE_TABLE_NAME")
         onCreate(db)
     }
+
+    fun getIban(monIban: String) : String { //getteur pour iban
+        var ibanVide: String = ""  //peut être null car inexistant
+        val db = this.readableDatabase
+        val selectionArgs = arrayOf(monIban)
+        val cursor = db.query(
+            USERS_TABLE_NAME,
+            null,
+            "$IBAN=?",
+            selectionArgs,
+            null,
+            null,
+            null,
+            null
+        )
+        if (cursor != null) { //si le cursor n'est pas null, s'il y a un resultat déjà
+            if (cursor.moveToFirst()) { //on le deplace sur les differents champs
+                val iban = cursor.getString(5)
+                val monIban = iban
+                return monIban
+            }
+        }
+        db.close()
+        return ibanVide
+
+    }
     fun addCompte(compte: Compte): Boolean{
         //insérer un nvx compte dans le bdd
         val db = this.writableDatabase //ouvrir la bdd
