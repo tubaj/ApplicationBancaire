@@ -15,9 +15,6 @@
             android:exported="false" />
         <!-- enlever la barre violette -->
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".SignUpActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
