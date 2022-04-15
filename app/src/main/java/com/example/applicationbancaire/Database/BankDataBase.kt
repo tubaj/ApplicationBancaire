@@ -4,6 +4,8 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import com.example.applicationbancaire.AccueilFragment
+import com.example.applicationbancaire.VirementFragment
 import com.example.applicationbancaire.data.Compte
 import com.example.applicationbancaire.data.User
 
@@ -59,7 +61,7 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
         onCreate(db)
     }
 
-    fun getIban(monIban: String) : String { //getteur pour iban
+    fun getIban(monIban: String) : String? { //getteur pour iban
         var ibanVide: String = ""  //peut être null car inexistant
         val db = this.readableDatabase
         val selectionArgs = arrayOf(monIban)
@@ -83,6 +85,37 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
         db.close()
         return ibanVide
 
+    }
+
+    fun setSoldeIban(monSolde: Int, monIban: String){
+        val db = this.writableDatabase //ouvrir la bdd
+        db?.execSQL("UPDATE $COMPTE_TABLE_NAME SET $SOLDE WHERE $SOLDE='$monSolde' AND $IBAN='$monIban'" )
+    }
+
+    fun getSoldeIban(monIban: String): Int {
+        var monSolde: Int =  0 //peut être null car inexistant
+        val db = this.readableDatabase
+        val selectionArgs = arrayOf(monIban)
+        val cursor = db.query(
+            COMPTE_TABLE_NAME,
+            null,
+            "$SOLDE=? WHERE $IBAN=?",
+            selectionArgs,
+            null,
+            null,
+            null,
+            null
+        )
+        if (cursor != null) { //si le cursor n'est pas null, s'il y a un resultat déjà
+            if (cursor.moveToFirst()) { //on le deplace sur les differents champs
+                val solde = cursor.getInt(1)
+                val iban = cursor.getString(4)
+                val monSolde = solde
+                return monSolde
+            }
+        }
+        db.close()
+        return monSolde
     }
     fun addCompte(compte: Compte): Boolean{
         //insérer un nvx compte dans le bdd
@@ -168,3 +201,7 @@ class BankDataBase(var mContext: Context) : SQLiteOpenHelper( //const de la clas
     }
 
 }
+
+
+
+

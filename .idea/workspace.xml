@@ -12,7 +12,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="741d1222-d93e-41f5-959c-c8493bc50380" name="Default Changelist" comment="Eleventh Commit">
+    <list default="true" id="741d1222-d93e-41f5-959c-c8493bc50380" name="Default Changelist" comment="Twelfth Commit">
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.2/fileHashes/fileHashes.bin" afterDir="false" />
@@ -23,11 +23,11 @@
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/AccueilActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/AccueilActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/AccueilFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/AccueilFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/Database/BankDataBase.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/Database/BankDataBase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/LoginActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/LoginActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/SignUpActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/SignUpActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/VirementFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/VirementFragment.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/data/Compte.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/data/Compte.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/data/User.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/applicationbancaire/data/User.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_virement.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_virement.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649974187735</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Twelfth Commit">
+      <created>1650013469448</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1650013469448</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -271,6 +278,7 @@
     <MESSAGE value="Nineth Commit" />
     <MESSAGE value="tenth Commit" />
     <MESSAGE value="Eleventh Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Eleventh Commit" />
+    <MESSAGE value="Twelfth Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Twelfth Commit" />
   </component>
 </project>

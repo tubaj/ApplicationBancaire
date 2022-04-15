@@ -2,17 +2,11 @@ package com.example.applicationbancaire
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.content.Intent
-import android.util.DisplayMetrics
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.Toast
 import com.example.applicationbancaire.Database.BankDataBase
-import com.example.applicationbancaire.data.User
 import kotlinx.android.synthetic.main.activity_login.*
-import kotlin.error
 
 class LoginActivity : AppCompatActivity() {
     // Write a message to the database
@@ -59,7 +53,10 @@ class LoginActivity : AppCompatActivity() {
             }
         }//fin quand on clique sur le bouton inscription
 
+
+
     }//fin override
+
 
 }//fin class
 

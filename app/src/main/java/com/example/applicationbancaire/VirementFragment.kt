@@ -1,13 +1,11 @@
 package com.example.applicationbancaire
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.applicationbancaire.Database.BankDataBase
-import kotlinx.android.synthetic.main.fragment_accueil.*
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -31,9 +29,11 @@ class VirementFragment : Fragment() {
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
-           // db = BankDataBase(this) //initialise le constructeur de la bdd
+            //db = BankDataBase(this) //initialise le constructeur de la bdd
+
         }
     }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -47,7 +47,15 @@ class VirementFragment : Fragment() {
     }
 
     /*fun faireVirement(iban_exp: String, iban_desti: String, montant: Int) {
-            db.getIban(iban_exp)
+            val solde_iban_exp =  db.getSoldeIban(iban_exp) //obtenir le solde du client
+            val soustraction = solde_iban_exp - montant
+            db.setSoldeIban(soustraction, iban_exp) //maj du solde du client
+
+            //envoie du virement
+            val solde_iban_dest = db.getSoldeIban(iban_desti) //obtenir le solde du desti
+            val addition = solde_iban_dest + montant
+            db.setSoldeIban(addition, iban_desti)
+
     }*/
 
 
